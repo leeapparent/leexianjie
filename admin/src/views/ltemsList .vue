@@ -9,9 +9,12 @@
           <el-button
             size="mini"
             type="text"
-            @click="$router.push(`/categories/edit/${scope.row._id}`)"
-          >编辑</el-button>
-          <el-button size="mini" type="text" @click="remove(scope.row)">删除</el-button>
+            @click="$router.push(`/ltems/edit/${scope.row._id}`)"
+            >编辑</el-button
+          >
+          <el-button size="mini" type="text" @click="remove(scope.row)"
+            >删除</el-button
+          >
         </template>
       </el-table-column>
     </el-table>
@@ -30,7 +33,7 @@ export default {
   methods: {
     async fetch() {
       //eslint-disable-next-line no-unused-vars
-      const res = await this.$http.get("rest/categories");
+      const res = await this.$http.get("rest/ltems");
       this.items = res.data;
     },
     async remove(row) {
@@ -40,7 +43,7 @@ export default {
         type: "warning"
       }).then(async () => {
         //eslint-disable-next-line no-unused-vars
-        const res = this.$http.delete(`rest/categories/${row._id}`);
+        const res = this.$http.delete(`rest/ltems/${row._id}`);
         this.$message({
           type: "success",
           message: "删除成功!"
