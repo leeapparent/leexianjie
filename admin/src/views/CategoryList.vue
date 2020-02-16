@@ -10,8 +10,11 @@
             size="mini"
             type="text"
             @click="$router.push(`/categories/edit/${scope.row._id}`)"
-          >编辑</el-button>
-          <el-button size="mini" type="text" @click="remove(scope.row)">删除</el-button>
+            >编辑</el-button
+          >
+          <el-button size="mini" type="text" @click="remove(scope.row)"
+            >删除</el-button
+          >
         </template>
       </el-table-column>
     </el-table>
