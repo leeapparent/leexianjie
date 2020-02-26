@@ -1,0 +1,29 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1582643553550'); /* IE9 */
+  src: url('iconfont.eot?t=1582643553550#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAPUAAsAAAAACFgAAAOIAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDHAqEEINhATYCJAMQCwoABCAFhG0HSxtWBxEVnMfIfhzGMcn2odxSFU202/fggd6z3mQm3Wy6EA5STiwOIL/E7t+2OYjfDQDf/zl/xEJHmKKcRY/+Lb2v5fSk2Yf/OWa6TBvmt60Fh5KRPBzgKFoHdl1eQqfx/M75hrELWuLzEIBJBmUQTZq2dmGgME8TgBg+ZFAfjIwH1cAUGHZHxbUhlcVqdAxtieYDVgXfL75SSRigoUvMc9sPtPrT4L38MFbODs6mu4dAO10IYDeBBMoACsTgykhfZFQpg8RUWxXVAMMKaTDVTuaHscEg1h3FYuAoaIP/ecKBaQmD2Co5Ce8dATT4kCmAhA9jdQ/wLAWAAYQCe+AnmJKGoI5ERIex6vRZGiDMsQnL/ITZxcapttEV/aXbtr2BQJewpRvnbHKGL9swe72LIzcyE8M3/JxpdwI5++xmt/3Zu4v7gHtPK3ad9rsu3sjclxPwZM9O2m5d8Kf53W76qhvnJNq2J2B77dfuI2codm85nudr7fLauXNs76WUjG0pwZbd9jSaOavRnvNY6Stj4wVknWUgZw3r+9odka9fqyOW0nMfkYlJ+ko41CDeNn1xRSbeKYrzhS5XGCvs1R7favi7jFxjNrAsJS2rQQXLksqyvOQUxcZ9Oqq+/rtwMz+9euKU9qVfahVqlV6cuTzCmZZSIu12jYbhsklIs6gN6zou6fM1PZzu6kpIN8f4u8fXZx7OrtLLM6pa9QzhEw+NyV3P353vDV+iNyhbpVSnNrHJKjlWMRqA4Hl5TVYBMGdoGqmdlM/kpJ9+HOX7RhzrFVnnv+F86Kkn07r2CVLBk+aMblb+nLaz9heXonzAZAZNb3qVUsw02lT3DhQN0aFZM8QwgWAihhdTOOLfXkhgZLQMNEJIB4lBHlJhy4COkyrgwKA+mJSm2c1OYhmLRKhQoBQLAAiiOAUaEVwFSRRFSIV9DjoJfAcHUUKCiUfE3tNJgUKUm5PCGTL6/FPJ0nnbb5uw/4782zhN6wP2GzqUeUrCOF+/oYNOccHwk6dmnrxKS1fwMjSNUK9SgS0szPpjFPmqDwpZ2tGGk8IZMuLzT5Qsnfcm26bw9Xfk38Zpw0hV/g0dyv2JhJC4A/Jm6TqN3MrBw0+eYubxSV6lJa4whMaqCNFXH1WBLaQYUOqPRGic72oJl7e1b3gJMDHfUQlNSKGEzqEfBy26b8ClcoOZtKWt2WkWFFAZjQA=') format('woff2'),
+  url('iconfont.woff?t=1582643553550') format('woff'),
+  url('iconfont.ttf?t=1582643553550') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1582643553550#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cc-menu-circle:before {
+  content: "\e672";
+}
+
+.icon-omit:before {
+  content: "\e503";
+}
+
+.icon-card-hero:before {
+  content: "\e61f";
+}
+

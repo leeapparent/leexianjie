@@ -1,0 +1,279 @@
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f1f1f1;
+  line-height: 1.2rem;
+}
+
+html {
+  font-size: 13px;
+}
+
+a {
+  color: #999;
+}
+
+// colors
+
+$colors: (
+  "primary": #db9e3f,
+  "info": #4b67af,
+  "danger": #791a15,
+  "blue-1": #1f3695,
+  "blue": #4394e4,
+  "white": #fff,
+  "white-1": #fcfcfc,
+  "white-2": #eceef0,
+  "light": #f9f9f9,
+  "light-1": #d4d9de,
+  "grey": #999,
+  "grey-1": #666,
+  "dark-1": #343440,
+  "dark": #222,
+  "black": #000
+);
+
+@each $colorKey, $color in $colors {
+  .text-#{$colorKey} {
+    color: $color;
+  }
+
+  .bg-#{$colorKey} {
+    background-color: $color;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  outline: none; //不要高亮
+}
+
+html {
+  font-size: 13px;
+}
+
+body {
+  // 后面的样式可以自己添加 修改
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.2rem;
+  background: #f1f1f1;
+}
+
+a {
+  color: #999;
+}
+
+// 定义颜色 后面可以加
+$colors: (
+  "primary": #db9e3f,
+  "white": #fff,
+  "black": #000,
+  "dark": #222,
+  "dark-1": #333,
+  "grey": #999,
+  "grey-1": #666,
+  "light": #f9f9f9,
+  "info": #4b67af,
+  "light-1": #d4d9de
+);
+$border-color: map-get($colors, "light-1");
+
+@each $colorKey, $color in $colors {
+  .text-#{$colorKey} {
+    color: $color;
+  }
+
+  .bg-#{$colorKey} {
+    background-color: $color;
+  }
+}
+
+// text
+@each $var in (left, center, right) {
+  .text-#{$var} {
+    text-align: $var !important;
+  }
+}
+
+// font size 现在的字体 是用的 13px
+$base-font-size: 1rem;
+$font-sizes: (
+  xxs: 0.6154,
+  //8
+    xs: 0.7692,
+  // 10
+    sm: 0.9231,
+  // 12
+    md: 1,
+  // 13
+    lg: 1.0769,
+  // 14
+    xl: 1.2308,
+  // 16px
+);
+
+@each $sizeKey, $size in $font-sizes {
+  .fs-#{$sizeKey} {
+    font-size: $size * $base-font-size;
+  }
+}
+
+// width
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+// flex
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+$flex-jc: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  between: space-between,
+  around: space-around
+);
+
+@each $key, $value in $flex-jc {
+  .jc-#{$key} {
+    justify-content: $value;
+  }
+}
+
+$flex-ai: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  stretch: stretch
+);
+
+@each $key, $value in $flex-ai {
+  .ai-#{$key} {
+    align-items: $value;
+  }
+}
+
+.flex-1 {
+  // 占用 剩下的内容
+  flex: 1;
+}
+
+// 边距
+
+$spacing-types: (
+  m: margin,
+  p: padding
+);
+$spacing-directions: (
+  t: top,
+  b: bottom,
+  l: left,
+  r: right
+);
+$spacing-base-sizes: 2rem;
+$spacing-sizes: (
+  0: 0,
+  1: 0.25,
+  2: 0.5,
+  3: 1,
+  4: 1.5,
+  5: 3
+);
+
+@each $typeKey, $type in $spacing-types {
+  //m.1
+  @each $sizeKey, $size in $spacing-sizes {
+    .#{$typeKey}-#{$sizeKey} {
+      #{$type}: $size * $spacing-base-sizes;
+    }
+  }
+
+  // mx-1 my-1
+  @each $sizeKey, $size in $spacing-sizes {
+    .#{$typeKey}x-#{$sizeKey} {
+      #{$type}-left: $size * $spacing-base-sizes;
+      #{$type}-right: $size * $spacing-base-sizes;
+    }
+
+    .#{$typeKey}y-#{$sizeKey} {
+      #{$type}-top: $size * $spacing-base-sizes;
+      #{$type}-bottom: $size * $spacing-base-sizes;
+    }
+  }
+
+  //mt-1
+  @each $directionKey, $direction in $spacing-directions {
+    @each $sizeKey, $size in $spacing-sizes {
+      .#{$typeKey}#{$directionKey}-#{$sizeKey} {
+        #{$type}-#{$direction}: $size * $spacing-base-sizes;
+      }
+    }
+  }
+}
+
+// btn
+
+.btn {
+  border: none;
+  border-radius: 0.1538rem;
+  font-size: map-get($font-sizes, "sm") * $base-font-size;
+  padding: 0.2rem 0.5rem;
+}
+// nav
+
+.nav {
+  display: flex;
+  .nav-item {
+    border-bottom: 3px solid transparent;
+    padding-bottom: 0.2rem;
+    &.active {
+      color: map-get($colors, "primary");
+      border-bottom-color: map-get($colors, "primary");
+    }
+  }
+  &.nav-inverse {
+    .nav-item {
+      color: map-get($colors, "white");
+      &.active {
+        border-bottom-color: map-get($colors, "white");
+      }
+    }
+  }
+}
+
+// 精灵图
+.sprite {
+  background: url(./assets/images/index.png) no-repeat 0 0;
+  background-size: 28.4615rem;
+  display: inline-block;
+  &.sprite-news {
+    width: 2.3846rem;
+    height: 1.9231rem;
+    background-position: 9.302% 0.813%;
+  }
+  &.sprite-arrow {
+    width: 0.7692rem;
+    height: 0.7692rem;
+    background-position: 38.577% 52.076%;
+  }
+}
