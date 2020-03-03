@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="top bg-black py-2 px-3 d-flex ai-center">
+    <div class="top bg-black py-2 px-3 d-flex ai-center topber">
       <img src="../assets/images/logo.png" alt="" height="30">
       <div class="px-2 flex-1">
         <div class="text-white">王者荣耀</div>
@@ -29,5 +29,11 @@
 export default {};
 </script>
 
-<style>
+<style lang="scss">
+.topber {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+// 兼容问题老得手机 不支持
 </style>
